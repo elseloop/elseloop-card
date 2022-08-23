@@ -15,16 +15,16 @@ const options = {
 
 // Text + chalk definitions
 const data = {
-  name: chalk.white('           Tierney Cyren'),
-  handle: chalk.white('bitandbang'),
-  shorthandle: chalk.white('bnb'),
-  work: chalk.white('Staff Developer Advocate at Twilio'),
-  twitter: chalk.gray('https://twitter.com/') + chalk.cyan('bitandbang'),
-  npm: chalk.gray('https://npmjs.com/') + chalk.red('~bnb'),
-  github: chalk.gray('https://github.com/') + chalk.green('bnb'),
-  linkedin: chalk.gray('https://linkedin.com/in/') + chalk.blue('bitandbang'),
-  web: chalk.cyan('https://bnb.im'),
-  npx: chalk.red('npx') + ' ' + chalk.white('bitandbang'),
+  name: chalk.white.bgRed.bold(' Dan Manchester | @elseloop '),
+  // handle: chalk.white.bgRed.bold('elseloop           '),
+  // shorthandle: chalk.white('bnb'),
+  work: chalk.white('Freelance Frontend Engineer'),
+  twitter: chalk.white.italic('https://twitter.com/') + chalk.cyan('elseloop'),
+  npm: chalk.white.italic('https://npmjs.com/') + chalk.red('~elseloop'),
+  github: chalk.white.italic('https://github.com/') + chalk.green('elseloop'),
+  linkedin: chalk.white.italic('https://linkedin.com/in/') + chalk.blue('elseloop'),
+  web: chalk.cyan('http://elseloop.com'),
+  npx: chalk.red('npx') + ' ' + chalk.white('@elseloop/elseloop-card  (via GitHub Package Registry)'),
   labelWork: chalk.white.bold('    Work:'),
   labelTwitter: chalk.white.bold(' Twitter:'),
   labelnpm: chalk.white.bold('     npm:'),
@@ -36,7 +36,7 @@ const data = {
 
 // Actual strings we're going to output
 const newline = '\n'
-const heading = `${data.name} / ${data.handle} / ${data.shorthandle}`
+const heading = `           ${data.name}`
 const working = `${data.labelWork}  ${data.work}`
 const twittering = `${data.labelTwitter}  ${data.twitter}`
 const npming = `${data.labelnpm}  ${data.npm}`
@@ -56,4 +56,4 @@ const output = heading + // data.name + data.handle
                webing + newline + newline + // data.labelWeb + data.web
                carding // data.labelCard + data.npx
 
-fs.writeFileSync(path.join(__dirname, 'bin/output'), chalk.green(boxen(output, options)))
+fs.writeFileSync(path.join(__dirname, 'bin/output'), chalk.red(boxen(output, options)))
