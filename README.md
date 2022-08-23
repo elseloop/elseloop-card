@@ -1,4 +1,4 @@
-It's me, Tierney!
+It's me, Dan!
 
 # Usage
 ## GitHub Package Registry
